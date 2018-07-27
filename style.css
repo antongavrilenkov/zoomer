@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+html, body, .zoomer, .zoomer__img-container {
+    height: 100%;
+}
+
+.zoomer__controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 18px 16px 16px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+.zoomer__controls [disabled] {
+    opacity: .25;
+}
+
+#zoomer__zoom-in-button, #zoomer__zoom-out-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+}
+
+#zoomer__zoom-in-button {
+    background: url('https://bnbs-gramercy-public.s3.amazonaws.com/homework/zoom-in.svg') no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+#zoomer__zoom-out-button {
+    background: url('https://bnbs-gramercy-public.s3.amazonaws.com/homework/zoom-out.svg') no-repeat;
+    background-size: cover;
+}
+
+.zoomer__img-container {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.zoomer__image {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
